@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <title>꾸꾸의 학습기록 - 예습</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function linksSetColor(color){
+            var alist = document.querySelectorAll('a');
+                           var i = 0;
+                           while(i < alist.length){
+                               alist[i].style.color = 'powderblue';
+                               i = i + 1;
+                             }
+                            }
+        function BodySetColor(color){
+            target.style.color = 'color';
+        }                    
+        function nightDayHandler(self){
+         var target = document.querySelector('body') 
+            if(self.value === 'night'){
+                               target.style.backgroundColor = 'black';
+                               BodySetColor(white)
+                               self.value = 'day';
+                               linksSetColor(color)
+                       } else {
+                           target.style.backgroundColor = 'white';
+                           BodySetColor(black)
+                           self.value = 'night';
+                           linksSetColor(blue)
+                           }
+                }
+</script>
+</head>
+<body>
+    <h1><a href="index.html">꾸꾸의 학습기록</a></h1>
+    <div id="grid">
+    <div id="index">
+       <ol>
+        <li><a href="1.html">HTML 1</a></li>
+        <li><a href="2.html">HTML 2</a></li>
+        <li><a href="3.html">HTML 3</a></li>
+        <li><a href="4.html">HTML 4</a></li>
+        <li><a href="5.html">HTML 5</a></li>
+        <li><a href="6.html">HTML 6</a></li>
+        <li><a href="css1.html">CSS 1</a></li>
+        <li><a href="css2.html">CSS 2</a></li>
+        <li><a href="css3.html">CSS 3</a></li>
+        <li><a href="css4.html">CSS 4</a></li>
+        <li><a href="css5.html">CSS 5</a></li>
+        <li><a href="js1.html">JS 1</a></li>
+        <li><a href="js2.html">JS 2</a></li>
+        <li><a href="js3.html">JS 3</a></li>
+        <li><a href="js4.html">JS 4</a></li>
+        <li><a href="js5.html">JS 5</a></li>
+
+    </ol>
+   </div>
+<div id="article">
+<h2>'생활코딩' 학습기록: JS 3</h2>
+    <input type="button" value="night" onclick="
+     nightDayHandler(self);
+    ">
+<hr>
+<br>
+<h3>35. 라이브러리와 프레임워크</h3>
+<p>
+  이제 마지막 수업을 시작해보도록 하겠다. 
+  오늘날 우리가 소프트웨어를 만든다고 하면, 혼자 만드는 경우는 없다. 그렇게 할 수가 없다.  
+  왜냐하면 우리는 누군가가 만든 소프트웨어 위에서 동작하는 소프트웨어를 만들고 있는 것이기 때문이다. (웹브라우저처럼)
+  그리고 그런 얘기가 아니라고 하더라도, 우리가 소프트웨어를 만들 때, 자기 혼자 만드는 것보다는 다른 사람이 이미 잘 만들어놓은 것을 부품으로 해서, 
+  내가 만들고자 하는 것을 빠르게 조립해서 만들어가는 것, 그것이 오늘날 소프트웨어를 만드는 아주 기본중의 기본이라고 할 수 있겠다. 
+  그래서 지금까지는 생산자가 되는 방법을 살펴보았고, 이제부터는 다른 사람이 만든 소프트웨어를 부품으로 해서 그 소프트웨어를 소비해서 
+  내가 만들고 있는 소프트웨어의 생산자가 되는 방법을 살펴보려고 한다. 
+  다시 말해서 생산자로서의 소비자, 그런 것들을 살펴본다. 
+  소프트웨어의 사회성이라고 할 수 있을 것이다. 
+</p>
+<p> 
+    이때 우리가 알아두면 좋을 용어는 두 가지이다. library와 framework이다. 
+    두 가지는 비슷하다. 다른 사람의 도움을 받아서 소프트웨어를 만든다. 라는 점에서 비슷하다. 
+    라이브러리는, 도서관이라는 뜻이다. 이는 무언가가 정리정돈되어있는 곳을 의미한다. 
+    즉, 내가 만들고자 하는 프로그램에 필요한 부품들이 되는 소프트웨어를 잘 정리정돈해놓은, 재사용하기 쉽도록 되어있는,
+    그러한 소프트웨어를 라이브러리라고 한다. 개인적인 느낌은 내가 만들고 있는 프로그램에 사용하는 부품을 가져오는 느낌이다. 
+</p>
+<p>
+    그리고 프레임워크라는 개념이 있다. (두 가지를 똑같이 봐도 상관이 없긴 한데. 약간 뉘앙스가 다르다.) 프레임웤은 우리가 만들고자 하는 것이 있을 떄, 
+    그 만들고자 하는 것이 무엇이냐에 따라서, 예를 들면 게임이냐. 웹이냐. 채팅이냐. 여러 가지가 있는데, 
+    그것을 만들려고 할 때, 언제나 필요한 공통적인 것이 있고, 또 우리가 만들고자 하는 기획의도에 따라서 달라지는 부분들이 있을 것이다. 
+    그중에서 공통적인 부분은, 프레임웤이라는 부분을 만들어놓고, 
+    우리는 만들고자 하는 것의 기능에 따라서, 또는 개성에 따라 달라지는 부분만 살짝씩 
+    수정하는 것을 통해서 우리가 만들고자 하는 것을 처음부터 끝까지 만들지 않도록 해주는, 거의 반제품과 같은 것이 프레임웤이다.
+    </p>
+<p>
+    라이브러리는 소프트웨어를 만드는 내가 라이브러리를 땡겨와서 쓰는 것의 느낌이라면,
+    프레임웤은 프레임웤 안에 들어가서 우리가 작업하는 느낌이다. 
+    어쨌든 무엇이 되었건, 다른 사람과 협력하는 모델이라고 이해하면 된다. 
+</p>
+<p> 
+    그중에 라이브러리를 살펴볼 것인데, js 라이브러리중에, 가장 유명한 것은 바로 jQuery라는 라이브러리이다. 
+    이는 상당히 오래되었고, 아주 안정적이다. 그리고 이것을 사용하면, 이것을 사용하지 않고 직접 코딩했던 것보다 생산성이 훨씬 더 높아진다. 
+    우리가 배웠던 지식이 있어야 제이쿼리를 잘 다룰 수 있다. 
+    또 우리가 지금까지 다루었던 지식만 가지고 우리가 느꼈던 절망감이 있어야 제이쿼리를 만났을 때 즐거워진다. 
+</p>
+
+
+<hr>
+<br>
+<h3>29. 객체 예고</h3>
+<p>
+
+</p>
+
+<hr>
+<br>
+<h3>37. 객체 예고</h3>
+<p>
+
+</p>
+</div>
+</div>
+</body> 
+</html>
